@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+NAME=$(basename "$PWD")
+ls "$NAME.c" | entr bash -c "printf '\n------\n\n' && gcc -o "$NAME.bin" "$NAME.c" && ./$NAME.bin"
