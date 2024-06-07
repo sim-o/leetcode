@@ -24,15 +24,10 @@ int findPivot(int *nums, int numsSize) {
 int binarySearch(int* nums, int left, int right, int target) {
   while (left < right) {
     int next = (right - left) / 2 + left;
-    // printf("l = %d, r = %d, next = %d\n", left, right, next);
     if (nums[next] < target) {
-      if (nums[next + 1] <= target)
-        left = next + 1;
-      else
-        return -1;
+      left = next + 1;
     } else if (nums[next] > target) {
-      if (next && nums[next - 1] >= target) right = next - 1;
-      else return -1;
+      right = next - 1;
     } else {
       return next;
     }
