@@ -1,6 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd "$SCRIPT_DIR/.."
+pwd
 find . -name a.out -delete
 find . -name '*.bin' -delete
-find . -name '*.bin.DSYM' -exec rm -rf {} \; 
+find . -name '*.bin.dSYM' -exec rm -rf {} \; 
