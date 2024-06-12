@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ "$1" == "" ]]; then
+  echo "usage: new [name]"
+  exit 1
+fi
+
+mkdir "$1"
+touch "$1/$1.c"
+cd "$1"
